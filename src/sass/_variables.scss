@@ -1,0 +1,42 @@
+:root {
+    /*========== Font family ==========*/
+    --roboto-font: 'Roboto', sans-serif;
+    --fredoka-one-font: 'Fredoka One', cursive;
+    --hind-madurai-font: 'Hind Madurai', sans-serif;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /*========== Font size ==========*/
+    --big-title-font-size: 3.3rem;  /* 53.5px */
+    --title-font-size: 2.75rem;  /* 44px */
+    --subtitle-font-size: 1.625rem;  /* 26px */
+
+    --biggest-lg-font-size: 1.5rem;  /* 24px */
+    --biggest-sm-font-size: 1.375rem;  /* 22px */
+    --bigger-font-size: 1.25rem;  /* 20px */
+    --big-font-size: 1.125rem;  /* 18px */
+
+    --normal-font-size: 1rem;  /* 16px */
+
+    --small-font-size: 0.875rem;  /* 14px */
+    --smaller-font-size: 0.75rem;  /* 12px */
+
+    /*========== Colors ==========*/
+    --bg-color: #F8EDF0;
+    --pink-color: #D23166;
+    --title-color: #0F0101;
+    --text-color: rgba(21, 1, 1, .5);
+    --button-color: #D64374;
+    --button-text-color: #FAFAFA;
+    --white-color: #FFFFFF;
+    --footer-color: #0A0808;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}

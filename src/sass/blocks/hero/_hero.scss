@@ -1,0 +1,41 @@
+.hero {
+    margin-top: 86px;
+    height: calc(100vh - 86px);
+    background-color: var(--bg-color);
+    &__wrapper{
+        height: calc(100vh - 86px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-info {
+        padding-right: 20px;
+        &__suptitle{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-medium);
+            font-size: var(--small-font-size);
+            color: var(--text-color);
+            letter-spacing: .1em;
+        }
+        &__title{
+            font-family: var(--fredoka-one-font);
+            font-weight: var(--font-medium);
+            font-size: var(--big-title-font-size);
+            line-height: 120%;
+            color: var(--title-color);
+            opacity: .9;
+            margin-bottom: 35px;
+            span {
+                color: var(--pink-color);
+            }
+        }
+        &__text{
+            font-family: var(--hind-madurai-font);
+            font-weight: var(--font-regular);
+            font-size: var(--big-font-size);
+            color: var(--text-color);
+            line-height: 150%;
+            margin-bottom: 50px;
+        }
+    }
+}

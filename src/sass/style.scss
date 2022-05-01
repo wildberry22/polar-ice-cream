@@ -1,0 +1,89 @@
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+
+// Стилизация скрола для Chrome
+::-webkit-scrollbar {
+    width: 20px; 
+} 
+::-webkit-scrollbar-track{
+    background: #ffcfdc;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #e76c95 0%, #eaa4e2 100%);
+    background-size: contain;
+    border-radius: 10px; 
+    border: 4px solid #ffcfdc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    // Стилизация скрола для Firefox
+    scrollbar-color: #e76c95 #ffcfdc;     
+    scrollbar-width: thin ;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgba(#000, .7);
+}
+.container{
+    max-width: 1150px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.btn{
+    font-family: var(--hind-madurai-font);
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font-size);
+    color: var(--button-text-color);
+    padding: 13px 50px;
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    &:after {
+        background: var(--white-color);
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index:var(--z-tooltip);
+    }
+    &:focus{
+        outline: none;
+    }
+    &:active{
+        transform: scale(0.98);
+    }
+    &:hover {
+        &:after {
+            left: 120%;
+            transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+    span {
+        z-index:var(--z-tooltip);
+    }
+}
+
+
+@import 'blocks/header/header';
+@import 'blocks/hero/hero';
+@import 'blocks/delivery/delivery';
+@import 'blocks/details/details';
