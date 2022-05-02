@@ -1,0 +1,60 @@
+.download {
+    background: linear-gradient(var(--bg-color) 0%, var(--bg-color) 92%, #fff 92%, #fff 100%);
+    padding-top: 90px;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &-img {
+        margin-top: -30px;
+    }
+    &-info{
+        max-width: 700px;
+        &__title{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-medium);
+            font-size: var(--title-font-size);
+            line-height: 1;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        &__text{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-regular);
+            font-size: var(--big-font-size);
+            color: var(--text-color);
+            line-height: 130%;
+            margin-bottom: 25px;
+        }
+        &__list{
+            margin-bottom: 40px;
+            list-style-type: none;
+            &-item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                .img-w {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                }
+                p {
+                    font-family: var(--roboto-font);
+                    font-weight: var(--font-regular);
+                    font-size: var(--biggest-sm-font-size);
+                    color: #000;
+                    line-height: 1;
+                }
+            }
+        }
+        &__links-googleplay{
+            padding-right: 20px;
+        }
+    }
+}

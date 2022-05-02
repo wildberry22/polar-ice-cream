@@ -81,9 +81,18 @@ body {
         z-index:var(--z-tooltip);
     }
 }
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
 
 
 @import 'blocks/header/header';
 @import 'blocks/hero/hero';
 @import 'blocks/delivery/delivery';
 @import 'blocks/details/details';
+@import 'blocks/product/product';
+@import 'blocks/testimonials/testimonials';
+@import 'blocks/download/download';
