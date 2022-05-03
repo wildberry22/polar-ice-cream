@@ -1,0 +1,29 @@
+@media (max-width: 1024px) {  // 900 - 1024 
+    .delivery__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .delivery-item{
+        margin: 20px 30px;
+    }
+}
+
+@media (max-width: 900px) {  // 768 - 900 
+    .delivery {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {  // 600 - 768 
+    .delivery-item{
+        padding: 15px;
+        margin: 10px 30px;
+    }
+}
+
+
+@media (max-width: 480px ) and  (min-width: 320px ){  // 320 - 480
+    .delivery{
+        padding: 40px 0;
+    }
+}

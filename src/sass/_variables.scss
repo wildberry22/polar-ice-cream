@@ -41,3 +41,26 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
+
+@media (max-width: 900px) {  // 768 - 900 
+    :root{
+        --big-title-font-size: 2.5rem;
+        --title-font-size: 2.25rem;
+    }
+}
+
+
+@media (max-width: 768px) {  // 600 - 768 
+    :root{
+        --big-title-font-size: 2.25rem;
+        --title-font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px ) and  (min-width: 320px ) {  // 320 - 480
+    :root{
+        --big-title-font-size: 1.75rem;
+        --title-font-size: 1.5rem;
+    }
+}
+

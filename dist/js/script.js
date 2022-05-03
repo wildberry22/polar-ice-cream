@@ -99,6 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
+/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js");
+
 
 
 
@@ -108,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_modules_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 /***/ }),
@@ -168,6 +171,50 @@ const forms = () => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (forms);
+
+/***/ }),
+
+/***/ "./src/js/modules/menu.js":
+/*!********************************!*\
+  !*** ./src/js/modules/menu.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const menu = () => {
+  const btnOpen = document.querySelector('.menu-show');
+  const btnClose = document.querySelector('.menu-hide');
+  const menu = document.querySelector('.header .nav-list');
+  const navItems = document.querySelectorAll('.nav-list__item');
+  btnOpen.addEventListener('click', () => {
+    if (document.body.offsetWidth < 421) {
+      btnClose.style.left = '20px';
+    } else {
+      btnClose.style.left = '40px';
+    }
+
+    menu.style.left = '0px';
+    document.querySelector('body').style.overflow = 'hidden';
+  });
+  btnClose.addEventListener('click', () => {
+    menu.style.left = '-101%';
+    btnClose.style.left = '-101%';
+    document.querySelector('body').style.overflow = 'visible';
+  });
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (document.body.offsetWidth < 601) {
+        menu.style.left = '-101%';
+        btnClose.style.left = '-101%';
+        document.querySelector('body').style.overflow = 'visible';
+      }
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (menu);
 
 /***/ }),
 

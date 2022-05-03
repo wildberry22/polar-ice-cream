@@ -6,9 +6,9 @@
         justify-content: space-between;
         align-items: flex-start;
     }
-    &-img {
+    /* &-img {
         margin-top: -30px;
-    }
+    } */
     &-info{
         max-width: 700px;
         &__title{
@@ -54,6 +54,7 @@
             }
         }
         &__links-googleplay{
+            text-decoration: none;
             padding-right: 20px;
         }
     }
