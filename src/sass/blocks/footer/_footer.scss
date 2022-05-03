@@ -1,0 +1,143 @@
+.footer {
+    background-color: var(--footer-color);
+    padding: 70px 0 90px;
+    .logo{
+        margin-bottom: 10px;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &-info{
+        max-width: 580px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &-follow{
+        max-width: 210px;
+        &__text{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-regular);
+            font-size: var(--smaller-font-size);
+            color: var(--footer-text-color);
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            margin-bottom: 25px;
+        }
+        &__links{
+            &-title{
+                font-family: var(--roboto-font);
+                font-weight: var(--font-medium);
+                font-size: var(--smaller-font-size);
+                color: var(--white-color);
+                line-height: 1;
+                margin-bottom: 5px;
+            }
+            &-list{
+                max-width: 90px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &-nav{
+        margin-top: -25px;
+        list-style-type: none;
+        &__item-link{
+            text-decoration: none;
+            font-family: var(--roboto-font);
+            font-weight: var(--font-regular);
+            font-size: var(--smaller-font-size);
+            color: var(--footer-text-color);
+            line-height: 120%;
+            transition: all .3s;
+            &:hover {
+                color: var(--white-color);
+            }
+        }
+    }
+    &-docs{
+        margin-top: -25px;
+        list-style-type: none;
+        &__item-link{
+            text-decoration: none;
+            font-family: var(--roboto-font);
+            font-weight: var(--font-regular);
+            font-size: var(--smaller-font-size);
+            color: var(--footer-text-color);
+            line-height: 120%;
+            transition: all .3s;
+            &:hover {
+                color: var(--white-color);
+            }
+        }
+    }
+    &-newsletter{
+        margin-top: -25px;
+        &__title{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-medium);
+            font-size: var(--normal-font-size);
+            color: var(--white-color);
+            margin-bottom: 15px;
+        }
+        &__form{
+            position: relative;
+            border-radius: 5px;
+            width: 390px;
+            height: 55px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        &__input{
+            font-family: var(--roboto-font);
+            font-weight: var(--font-regular);
+            font-size: var(--small-font-size);
+            color: var(--white-color);
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--pink-color);
+            border-radius: 5px;
+            background-color: var(--footer-color);
+            padding: 15px 155px 15px 30px;
+            &::placeholder {
+                font-family: var(--roboto-font);
+                font-weight: var(--font-regular);
+                font-size: var(--small-font-size);
+                color: var(--footer-text-color);
+            }
+            &:focus {
+                outline: 1px solid var(--pink-color);
+            }
+        }
+        &__btn{
+            color: var(--white-color);
+            font-size: var(--bigger-font-size);
+            line-height: 1;
+            padding: 18px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &__pay{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 130px;
+        }
+    }
+    .status{
+        position: absolute;
+        top: -48px;
+        left: 130px;
+    }
+}

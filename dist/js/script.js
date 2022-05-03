@@ -98,6 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll */ "./src/js/modules/scroll.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
+
 
 
 
@@ -105,7 +107,67 @@ document.addEventListener("DOMContentLoaded", () => {
   Object(_modules_scroll__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/forms.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/forms.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const forms = () => {
+  const form = document.querySelectorAll('form');
+  const inputs = document.querySelectorAll('input');
+  const message = {
+    loading: 'Loading...',
+    success: 'Thank you! We will contact you soon',
+    failure: 'Something went wrong...'
+  };
+
+  const clearInputs = () => {
+    inputs.forEach(item => {
+      item.value = '';
+    });
+  };
+
+  const postData = async (url, data) => {
+    document.querySelector('.status').textContent = message.loading;
+    let res = await fetch(url, {
+      method: 'POST',
+      body: data
+    });
+    return await res.text();
+  };
+
+  form.forEach(item => {
+    item.addEventListener('submit', e => {
+      e.preventDefault();
+      let statusMessage = document.createElement('div');
+      statusMessage.classList.add('status');
+      item.appendChild(statusMessage);
+      const formData = new FormData(item);
+      postData('server.php', formData).then(res => {
+        console.log(res);
+        statusMessage.textContent = message.success;
+      }).catch(() => {
+        statusMessage.textContent = message.failure;
+      }).finally(() => {
+        clearInputs();
+        setTimeout(() => {
+          statusMessage.remove();
+        }, 5000);
+      });
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (forms);
 
 /***/ }),
 

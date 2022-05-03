@@ -87,6 +87,10 @@ body {
 .show {
     display: block;
 }
+.status{
+    margin-top: 10px;
+    color: var(--button-color);
+}
 
 
 @import 'blocks/header/header';
@@ -96,3 +100,5 @@ body {
 @import 'blocks/product/product';
 @import 'blocks/testimonials/testimonials';
 @import 'blocks/download/download';
+@import 'blocks/question/question';
+@import 'blocks/footer/footer';
