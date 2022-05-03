@@ -44,6 +44,10 @@
                 list-style-type: none;
                 a{
                     text-decoration: none;
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
                 }
             }
         }
@@ -133,6 +137,21 @@
             justify-content: space-between;
             align-items: center;
             max-width: 130px;
+            &-item:nth-child(1){
+                img{
+                    height: 22px;
+                }
+            }
+            &-item:nth-child(2){
+                img{
+                    height: 20px;
+                }
+            }
+            &-item:nth-child(3){
+                img{
+                    height: 15px;
+                }
+            }
         }
     }
     .status{
