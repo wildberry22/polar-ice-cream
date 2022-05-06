@@ -85,9 +85,10 @@ body {
 .hide {
     display: none;
 }
-.show {
-    display: block;
-}
+/* .show {
+    height: 100%;
+    opacity: 1;
+} */
 .status{
     margin-top: 10px;
     color: var(--button-color);

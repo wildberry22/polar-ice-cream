@@ -19,6 +19,7 @@
                 font-weight: var(--font-medium);
                 font-size: var(--big-font-size);
                 color: var(--text-color);
+                text-transform: uppercase;
                 padding: 0 20px;
                 transition: all .3s;
                 cursor: pointer;
@@ -36,6 +37,9 @@
                     }
                 }
             }
+        }
+        &__content-item{
+            transition: opacity .3s;
         }
         &__item{
             display: flex;
@@ -56,6 +60,9 @@
             }
             &-img{
                 padding-right: 85px;
+                img{
+                    width: 580px;
+                }
             }
             &-content{
                 display: flex;

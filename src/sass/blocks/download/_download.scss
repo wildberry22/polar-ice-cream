@@ -6,9 +6,10 @@
         justify-content: space-between;
         align-items: flex-start;
     }
-    /* &-img {
-        margin-top: -30px;
-    } */
+    &-img img {
+        width: 305px;
+    }
+    
     &-info{
         max-width: 700px;
         &__title{
@@ -53,6 +54,21 @@
                     font-size: var(--biggest-sm-font-size);
                     color: #000;
                     line-height: 1;
+                }
+            }
+        }
+        &__links{
+            a{
+                img{
+                    transition: all .3s;
+                    width: 175px;
+                    object-fit: cover;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                    
                 }
             }
         }

@@ -3,6 +3,11 @@
     padding: 70px 0 90px;
     .logo{
         margin-bottom: 10px;
+        img{
+            width: 79px;
+            height: 79px;
+            object-fit: cover;
+        }
     }
     &__wrapper{
         display: flex;

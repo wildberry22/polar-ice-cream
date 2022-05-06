@@ -17,16 +17,16 @@ const menu = () => {
     });
 
     btnClose.addEventListener('click', () => {
-        menu.style.left = '-101%';
-        btnClose.style.left = '-101%';
+        menu.style.left = '-105%';
+        btnClose.style.left = '-105%';
         document.querySelector('body').style.overflow = 'visible';
     });
 
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             if(document.body.offsetWidth < 601) {
-                menu.style.left = '-101%';
-                btnClose.style.left = '-101%';
+                menu.style.left = '-105%';
+                btnClose.style.left = '-105%';
                 document.querySelector('body').style.overflow = 'visible';
             }
         });
